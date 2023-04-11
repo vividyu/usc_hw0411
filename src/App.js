@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import IntegratedList from './IntegratedList';
+
+let first = [
+  { uuid: 2, name: "Darling" },
+  { uuid: 3, name: "Cry-Baby" },
+  { uuid: 4, name: "Snitch" },
+  { uuid: 5, name: "Pawn" }
+];
+
+let second = [
+  { uuid: 1, role: "admin" },
+  { uuid: 2, role: "contributor" },
+  { uuid: 3, role: "owner" },
+  { uuid: 4, role: "contributor" }
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <IntegratedList first={first} second={second} />
     </div>
   );
 }
